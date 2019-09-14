@@ -8,8 +8,9 @@ jobs:
       - name: checkout code
         uses: actions/checkout@v1
         
-      - name: build docker images 
+      - name: use docker images 
         uses: docker://driv/docker-maven-java-oracle
+      - name: build docker images 
         run: |
           echo "6snC9AznJpjWZAw" | docker login -u "赚钱的大氓" --password-stdin registry.cn-hongkong.aliyuncs.com
           python package.py
